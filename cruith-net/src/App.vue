@@ -1,29 +1,50 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="bg">
+    <div id="app">
+      <div id="nav">
+        <Navigator msg="Cruith.net" />
+      </div>
+      <router-view id="route" />
     </div>
-    <router-view />
   </div>
 </template>
 
+<script lang="ts">
+import Navigator from "./views/Navigator.vue";
+export default {
+  name: "App",
+  components: {
+    Navigator,
+  },
+};
+</script>
+
 <style>
+.bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./assets/background.png");
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
+  
+  margin: 0 auto;
 }
 
-#nav {
-  padding: 30px;
+
+#route {
+  justify-content: center;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 #nav a.router-link-exact-active {
