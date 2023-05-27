@@ -48,8 +48,5 @@ export default class Navigator extends Vue {
 a {
     color: #ffffff;
 }
-.navbar {
-    margin-top: 1%;
-}
 </style>
   
